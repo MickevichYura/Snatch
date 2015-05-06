@@ -54,36 +54,37 @@
           </ul>
         </div>
 
+        <div class="content">
+          <h2>Did You Know?</h2>
 
-        <h2>Did You Know?</h2>
-        <table border="1">
-          <tr bgcolor="#FEFBA5">
-            <th style="text-align:left">number</th>
-            <th style="text-align:left">Likes</th>
-            <th style="text-align:left">text</th>
-          </tr>
-          <xsl:for-each select="facts/fact">
-            <xsl:sort select="numberOfLikes"/>
-            <tr>
-              <td>
-                <xsl:value-of select="position()"/>
-              </td>
-              <td>
-                <xsl:value-of select="number(numberOfLikes)"/>
-              </td>
-              <td>
-                <xsl:value-of select="text"/>
-              </td>
+          <table border="1">
+            <tr bgcolor="#FEFBA5">
+              <th style="text-align:left">number</th>
+              <th style="text-align:left">Likes</th>
+              <th style="text-align:left">text</th>
             </tr>
-          </xsl:for-each>
-        </table>
+            <xsl:for-each select="facts/fact">
+              <xsl:sort select="numberOfLikes"/>
+              <tr>
+                <td>
+                  <xsl:value-of select="position()"/>
+                </td>
+                <td>
+                  <xsl:value-of select="number(numberOfLikes)"/>
+                </td>
+                <td>
+                  <xsl:value-of select="text"/>
+                </td>
+              </tr>
+            </xsl:for-each>
+          </table>
 
-        <h3>Суммарное количество</h3>
-        <xsl:value-of select="sum(//numberOfLikes)"/>
+          <h3>Sum</h3>
+          <xsl:value-of select="sum(//numberOfLikes)"/>
 
-        <h3>Среднее количество</h3>
-        <xsl:value-of select="sum(//numberOfLikes) div count(//numberOfLikes)"/>
-
+          <h3>Average</h3>
+          <xsl:value-of select="sum(//numberOfLikes) div count(//numberOfLikes)"/>
+        </div>
       </body>
     </html>
   </xsl:template>

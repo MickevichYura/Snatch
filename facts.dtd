@@ -1,0 +1,4 @@
+<!ELEMENT facts ( fact+ ) >
+<!ELEMENT fact ( numberOfLikes, text ) >
+<!ELEMENT numberOfLikes ( #PCDATA ) >
+<!ELEMENT text ( #PCDATA ) >

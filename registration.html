@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Registration</title>
+    <link rel="stylesheet" href="registration.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" type="image/x-icon" href="images/icon.ico" />
+
+    <script>
+        function checkPasswords() {
+            if (document.getElementById('passwordX').value !== document.getElementById('passwordY').value) {
+                alert('Passwords do not match!');
+                return false;
+            } else {
+
+                return true;
+            }
+        }
+    </script>
+
+</head>
+
+
+<body>
+
+    <div id="header">
+        <ul class="menu">
+            <li><a href="index.html">Home</a>
+                <ul class="submenu">
+                    <li><a href="index.html#Storyline">Storyline</a></li>
+                    <li><a href="index.html#Cast">Cast</a></li>
+                    <li><a href="index.html#Produced">Produced</a></li>
+                </ul>
+            </li>
+
+            <li><a href="director.html">Guy Ritchie</a></li>
+            <li><a href="facts.xml">Facts</a></li>
+            <li><a href="photo.html">Photo</a></li>
+            <li><a href="video.html">Video</a></li>
+            <li><a href="my review.html">My Review</a></li>
+            <li><a href="reviews.html">Reviews</a></li>
+            <li><a href="registration.html">Registration</a></li>
+        </ul>
+    </div>
+
+    <div class="content">
+        <form action="action.html" method="get" id="registration" name="registration" onsubmit="return checkPasswords()">
+            <p>
+                <label for="fname">First Name</label>
+                <input type="text" id="fname" name="fname" maxlength="25" pattern="[A-Za-z\s]+$" required /><span></span>
+            </p>
+            <p>
+                <label for="lname">Last Name</label>
+                <input type="text" id="lname" name="lname" maxlength="25" pattern="[A-Za-z\s]+$" required /><span></span>
+            </p>
+            <p>
+                <label for="birthday">Date of birth</label>
+                <input type="date" id="birthday" name="birthday" placeholder="31-12-1990" maxlength="10" size="10" required /><span></span>
+            </p>
+            <p>
+                <label for="email">E-mail</label>
+                <input type="email" id="email" name="email" maxlength="25" placeholder="example@grsu.by" pattern="^((([\w]+\.[\w]+)+)|([\w]+))@(([\w]+\.)+)([A-Za-z]{2,3})$" required /><span></span>
+            </p>
+            <p>
+                <label for="country">Country</label>
+                <select id="country" name="country" required>
+                    <option value="Belarus">Belarus</option>
+                    <option value="Russia">Russia</option>
+                    <option value="Ukraine">Ukraine</option>
+                    <option value="Pakistan">Pakistan</option>
+                </select>
+            </p>
+            <p>
+                <label for="passwordX">Password</label>
+                <input type="password" name="passwordX" id="passwordX" pattern="\w{5,25}" required /><span></span>
+            </p>
+            <p>
+                <label for="passwordY">Confirm</label>
+                <input type="password" name="passwordY" id="passwordY" pattern="\w{5,25}" required /><span></span>
+            </p>
+            <p>
+                <button type="submit" id="submit" name="submit">Submit</button>
+                <button type="reset" id="reset" name="reset">Reset</button>
+            </p>
+
+        </form>
+    </div>
+</body>
+</html>

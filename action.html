@@ -1,0 +1,74 @@
+<html>
+<head>
+    <title>Registration</title>
+    <link rel="stylesheet" href="registration.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" type="image/x-icon" href="images/icon.ico" />
+    <script type="text/javascript">
+        function getDate(date) {
+            var d = new Date();
+            var currDate = parseInt(d.getDate());
+            var currMonth = parseInt(d.getMonth() + 1);
+
+            var birth = date.split('-');
+
+            if ((parseInt(birth[1]) - currMonth) >= 0 || (parseInt(birth[2]) - currDate) >= 0) {
+                if ((parseInt(birth[1]) - currMonth) === 0 && (parseInt(birth[2]) - currDate) !== 0) {
+                    return "Before your birthday : " + (parseInt(birth[2]) - currDate) + " Days";
+                }
+                else if ((parseInt(birth[1]) - currMonth) === 0 && (parseInt(birth[2]) - currDate) === 0) {
+                    return "Your birthday today";
+                }
+                else if ((parseInt(birth[2]) - currDate) >= 0) {
+                    return "Before your birthday : " + (parseInt(birth[1]) - currMonth) + " Month & " + (parseInt(birth[2]) - currDate) + " Days";
+                }
+                else {
+                    return "Your birthday has already happened";
+                }
+            }
+            else if (date !== "") {
+                return "Your birthday has already happened";
+            }
+            else {
+                return "Error: You have not selected date";
+            }
+        }
+        function getInfo() {
+            var data = location.search.substring(1).split('&');
+            var name = data.shift();
+
+            document.write("<div class='shadow'><h2> Hello, " + name.split('=')[1] + "</h2>");
+
+            while (splitArray = data.shift()) {
+                splitArray = splitArray.split('=');
+
+                if (splitArray[0] === "lname") {
+                    document.write("<p>Last Name : " + splitArray[1] + "</p>");
+                }
+
+                if (splitArray[0] === "email") {
+                    document.write("<p>Email : " + splitArray[1].replace("%40", "@") + "</p>");
+                }
+
+                if (splitArray[0] === "country") {
+                    document.write("<p>Country : " + splitArray[1] + "</p>");
+                }
+
+                if (splitArray[0] === "passwordX") {
+                    document.write("<p>Password : " + splitArray[1] + "</p>");
+                }
+
+                if (splitArray[0] === "birthday") {
+                    document.write("<p>" + getDate(splitArray[1]) + "</p>");
+                }
+            }
+            document.write("</div>");
+        }
+    </script>
+</head>
+<body>
+    <script type="text/javascript">
+        getInfo();
+    </script>
+</body>
+</html>

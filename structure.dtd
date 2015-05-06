@@ -1,0 +1,10 @@
+<!ELEMENT Item ( name, link, SubItems ) >
+<!ATTLIST Item id NMTOKEN #REQUIRED >
+
+<!ELEMENT Menu ( Item+ ) >
+<!ELEMENT SubItem ( name, link ) >
+<!ATTLIST SubItem id NMTOKEN #REQUIRED >
+
+<!ELEMENT SubItems ( SubItem* ) >
+<!ELEMENT link ( #PCDATA ) >
+<!ELEMENT name ( #PCDATA ) >

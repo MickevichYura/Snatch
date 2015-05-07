@@ -47,19 +47,19 @@
         <form action="action.html" method="get" id="registration" name="registration" onsubmit="return checkPasswords()">
             <p>
                 <label for="fname">First Name</label>
-                <input type="text" id="fname" name="fname" maxlength="25" pattern="[A-Za-z\s]+$" required /><span></span>
+                <input type="text" id="fname" name="fname" title="only english letters" pattern="[A-Za-z\s]+$" required /><span></span>
             </p>
             <p>
                 <label for="lname">Last Name</label>
-                <input type="text" id="lname" name="lname" maxlength="25" pattern="[A-Za-z\s]+$" required /><span></span>
+                <input type="text" id="lname" name="lname" title="only english letters" pattern="[A-Za-z\s]+$" required /><span></span>
             </p>
             <p>
                 <label for="birthday">Date of birth</label>
-                <input type="date" id="birthday" name="birthday" placeholder="31-12-1990" maxlength="10" size="10" required /><span></span>
+                <input type="date" id="birthday" name="birthday" title="Date format: 31-12-1990" required /><span></span>
             </p>
             <p>
                 <label for="email">E-mail</label>
-                <input type="email" id="email" name="email" maxlength="25" placeholder="example@grsu.by" pattern="^((([\w]+\.[\w]+)+)|([\w]+))@(([\w]+\.)+)([A-Za-z]{2,3})$" required /><span></span>
+                <input type="email" id="email" name="email" title="example@grsu.by" placeholder="example@grsu.by" pattern="^((([\w]+\.[\w]+)+)|([\w]+))@(([\w]+\.)+)([A-Za-z]{2,3})$" required /><span></span>
             </p>
             <p>
                 <label for="country">Country</label>
@@ -72,15 +72,15 @@
             </p>
             <p>
                 <label for="passwordX">Password</label>
-                <input type="password" name="passwordX" id="passwordX" pattern="\w{5,25}" required /><span></span>
+                <input type="password" name="passwordX" id="passwordX" pattern="\w{5,}" title="Five or more characters" required /><span></span>
             </p>
             <p>
                 <label for="passwordY">Confirm</label>
-                <input type="password" name="passwordY" id="passwordY" pattern="\w{5,25}" required /><span></span>
+                <input type="password" name="passwordY" id="passwordY" pattern="\w{5,}" title="Five or more characters" required /><span></span>
             </p>
             <p>
-                <button type="submit" id="submit" name="submit">Submit</button>
-                <button type="reset" id="reset" name="reset">Reset</button>
+                <button type="submit" id="submit" name="submit" title="Submit">Submit</button>
+                <button type="reset" id="reset" name="reset" title="Reset">Reset</button>
             </p>
 
         </form>

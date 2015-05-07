@@ -5,34 +5,26 @@
     <link rel="stylesheet" href="style.css" />
     <link rel="shortcut icon" type="image/x-icon" href="images/icon.ico" />
     <script type="text/javascript">
-        function getDate(date) {
-            var d = new Date();
-            var currDate = parseInt(d.getDate());
-            var currMonth = parseInt(d.getMonth() + 1);
 
+        function getDaysBeforeBirthday(date) {
+            var www = 86400000; //fron milliseconds to days
             var birth = date.split('-');
 
-            if ((parseInt(birth[1]) - currMonth) >= 0 || (parseInt(birth[2]) - currDate) >= 0) {
-                if ((parseInt(birth[1]) - currMonth) === 0 && (parseInt(birth[2]) - currDate) !== 0) {
-                    return "Before your birthday : " + (parseInt(birth[2]) - currDate) + " Days";
-                }
-                else if ((parseInt(birth[1]) - currMonth) === 0 && (parseInt(birth[2]) - currDate) === 0) {
-                    return "Your birthday today";
-                }
-                else if ((parseInt(birth[2]) - currDate) >= 0) {
-                    return "Before your birthday : " + (parseInt(birth[1]) - currMonth) + " Month & " + (parseInt(birth[2]) - currDate) + " Days";
-                }
-                else {
-                    return "Your birthday has already happened";
-                }
+            var now = new Date();
+            var birthday = new Date(birth[1] + " " + birth[2] + " " + now.getFullYear()); //"MM DD YYYY 00:00:00"
+
+            var remaining = birthday - now;
+
+            if ((remaining = Math.floor(remaining / www) + 1) < 0) {
+                birthday.setFullYear(new Date().getFullYear() + 1);
+                remaining = birthday - now;
+                return Math.floor(remaining / www) + remaining;
             }
-            else if (date !== "") {
-                return "Your birthday has already happened";
-            }
-            else {
-                return "Error: You have not selected date";
-            }
+
+            return remaining;
         }
+
+
         function getInfo() {
             var data = location.search.substring(1).split('&');
             var name = data.shift();
@@ -59,7 +51,7 @@
                 }
 
                 if (splitArray[0] === "birthday") {
-                    document.write("<p>" + getDate(splitArray[1]) + "</p>");
+                    document.write("<p> Birthday: " + splitArray[1] + "</p> <p> Days before birthday : " + getDaysBeforeBirthday(splitArray[1]) + "</p>");
                 }
             }
             document.write("</div>");

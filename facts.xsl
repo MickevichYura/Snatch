@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns="http://www.w3.org/1999/xhtml">
 
@@ -7,10 +7,9 @@
 
       <head>
         <title>Facts</title>
-        <link rel="stylesheet" href="style.css"/>
+        <link rel="stylesheet" href="css/style.css"/>
         <link rel="shortcut icon" type="image/x-icon" href="images/icon.ico"/>
       </head>
-
 
       <body>
         <div id="header">
@@ -34,7 +33,7 @@
               <a href="director.html">Guy Ritchie</a>
             </li>
             <li>
-              <a href="facts.xml">Facts</a>
+              <a href="facts.html">Facts</a>
             </li>
             <li>
               <a href="photo.html">Photo</a>

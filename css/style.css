@@ -1,6 +1,6 @@
 
 body {
-    background: #FEFBA5 url(images/background.jpg);
+    background: #FEFBA5 url(../images/background.jpg);
     background-size: cover;
     font: 1em 'PT Sans', Tahoma, Arial;
 }

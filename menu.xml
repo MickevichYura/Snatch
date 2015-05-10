@@ -1,23 +1,23 @@
 <?xml version="1.0"?>
 <menu>
-  <item id="0">1
-    <name>Home</name>2
+  <item id="0">
+    <name>Home</name>
     <link>index.html</link>3
-    <subItems>5
-      <subItem id="0">6
-        <name>Storyline</name>7
-        <link>index.html#Storyline</link>8
-      </subItem>9
-      <subItem id="1">10
-        <name>Cast</name>11
-        <link>index.html#Cast</link>12
-      </subItem>13
-      <subItem id="2">14
-        <name>Produced</name>15
-        <link>index.html#Produced</link>16
-      </subItem>17
-    </subItems>18
-  </item>19
+    <subItems>
+      <subItem id="0">
+        <name>Storyline</name>
+        <link>index.html#Storyline</link>
+      </subItem>
+      <subItem id="1">
+        <name>Cast</name>
+        <link>index.html#Cast</link>
+      </subItem>
+      <subItem id="2">
+        <name>Produced</name>
+        <link>index.html#Produced</link>
+      </subItem>
+    </subItems>
+  </item>
 
   <item id="1">
     <name>Guy Ritchie</name>
@@ -27,7 +27,7 @@
 
   <item id="3">
     <name>Facts</name>
-    <link>facts.xml</link>
+    <link>facts.html</link>
     <subItems></subItems>
   </item>
 

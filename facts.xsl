@@ -12,46 +12,7 @@
       </head>
 
       <body>
-        <div id="header">
-          <ul class="menu">
-            <li>
-              <a href="index.html">Home</a>
-              <ul class="submenu">
-                <li>
-                  <a href="index.html#Storyline">Storyline</a>
-                </li>
-                <li>
-                  <a href="index.html#Cast">Cast</a>
-                </li>
-                <li>
-                  <a href="index.html#Produced">Produced</a>
-                </li>
-              </ul>
-            </li>
 
-            <li>
-              <a href="director.html">Guy Ritchie</a>
-            </li>
-            <li>
-              <a href="facts.html">Facts</a>
-            </li>
-            <li>
-              <a href="photo.html">Photo</a>
-            </li>
-            <li>
-              <a href="video.html">Video</a>
-            </li>
-            <li>
-              <a href="my review.html">My Review</a>
-            </li>
-            <li>
-              <a href="reviews.html">Reviews</a>
-            </li>
-            <li>
-              <a href="registration.html">Registration</a>
-            </li>
-          </ul>
-        </div>
 
         <div class="content">
           <h2>Did You Know?</h2>

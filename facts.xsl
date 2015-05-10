@@ -24,7 +24,7 @@
               <th style="text-align:left">text</th>
             </tr>
             <xsl:for-each select="facts/fact">
-              <xsl:sort select="numberOfLikes"/>
+              <xsl:sort select="text"/>
               <tr>
                 <td>
                   <xsl:value-of select="position()"/>

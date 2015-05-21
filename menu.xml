@@ -2,7 +2,7 @@
 <menu>
   <item id="0">
     <name>Home</name>
-    <link>index.html</link>3
+    <link>index.html</link>
     <subItems>
       <subItem id="0">
         <name>Storyline</name>

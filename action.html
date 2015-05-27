@@ -18,12 +18,11 @@
             if ((remaining = Math.floor(remaining / www) + 1) < 0) {
                 birthday.setFullYear(new Date().getFullYear() + 1);
                 remaining = birthday - now;
-                return Math.floor(remaining / www) + remaining;
+                return Math.floor(remaining / www);
             }
 
             return remaining;
         }
-
 
         function getInfo() {
             var data = location.search.substring(1).split('&');

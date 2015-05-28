@@ -23,7 +23,7 @@
               <th style="text-align:left">Likes</th>
               <th style="text-align:left">text</th>
             </tr>
-            <xsl:for-each select="facts/fact[numberOfLikes &gt;5 and numberOfLikes &lt;250]">
+            <xsl:for-each select="facts/fact[numberOfLikes &gt;0 and numberOfLikes &lt;10000]">
               <xsl:sort select="text"/>
               <tr>
                 <td>
